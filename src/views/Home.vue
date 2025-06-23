@@ -110,7 +110,7 @@ export default {
         '4-3': '',
         '4-4': '',
         '5-1': '/functions/feature',
-        '5-2': '',
+        '5-2': '/functions/hobby',
         '5-3': '',
         '5-4': '',
         '6': ''

@@ -34,7 +34,6 @@ export default {
         async function loadDetail() {
             const {data: data} = await loadMemberDetails(id)
             member = data
-            console.log(member)
         }
 
         return {
