@@ -11,7 +11,7 @@ const routes = [
     component: Home,
     children: [
       {
-        path: '/member/list',
+        path: '/',
         name: 'member-list',
         component: MemberMain
       },
