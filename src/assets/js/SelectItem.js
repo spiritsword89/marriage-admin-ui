@@ -163,3 +163,33 @@ export const universityTier = [
         label: '海外高校'
     },
 ]
+
+export const MBTI = [
+    'ISTJ', 
+    'INTJ', 
+    'ISFJ', 
+    'INTP', 
+    'ESTJ', 
+    'ENTJ', 
+    'ESFJ', 
+    'ENTP', 
+    'ISTP', 
+    'INFJ', 
+    'ISFP', 
+    'INFP', 
+    'ESTP', 
+    'ENFJ', 
+    'ESFP', 
+    'ENFP'
+]
+
+export const gender = [
+    {
+        value: 'MALE',
+        label: '男'
+    },
+    {
+        value: 'FEMALE',
+        label: '女'
+    }
+]

@@ -143,7 +143,7 @@
             </div>
 
             <div class="function-area">
-                <el-button type="primary" plain>
+                <el-button type="primary" plain @click="onAddClick">
                     <el-icon class="el-icon--right"><Plus /></el-icon>
                     新增
                 </el-button>
@@ -170,7 +170,10 @@
                     <el-table-column fixed="right" label="操作" min-width="120">
                         <template #default="scope">
                             <el-button link type="primary" size="small" @click="handleMemberDetailClick(scope.row.memberId)">
-                                详情
+                                预览
+                            </el-button>
+                            <el-button link type="primary" size="small" @click="handleMemberEditClick(scope.row.memberId)">
+                                编辑
                             </el-button>
                             <el-button link type="primary" size="small">
                                 冻结
@@ -235,9 +238,22 @@ export default {
             })
         }
 
+        function handleMemberEditClick(memberId) {
+            router.push({
+                path: '/member/detail',
+                query: {
+                    id: memberId
+                }
+            })
+        }
+
         async function loadMemberList() {
             const {data: data } = await loadMembersByPage(this.searchConditions)
             tableData.value = data
+        }
+
+        function onAddClick() {
+            router.push('/member/add')
         }
         
         return {
@@ -247,8 +263,10 @@ export default {
             maritalStatus,
             degrees,
             universityTier,
+            onAddClick,
             loadMemberList,
-            handleMemberDetailClick
+            handleMemberDetailClick,
+            handleMemberEditClick
         }
     }
 }

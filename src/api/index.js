@@ -1,5 +1,13 @@
 import api from '../network/request.js' 
 
+export function saveMember(data) {
+    return api({
+        url: '/member/save',
+        method: 'post',
+        data
+    })
+}
+
 export function loadMembersByPage(data) {
     return api({
         url: '/member/search',

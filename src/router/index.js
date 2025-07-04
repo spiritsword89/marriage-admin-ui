@@ -5,6 +5,7 @@ import MemberMain from '../views/Members/MemberMain.vue'
 import MemberDetail from '../views/Members/MemberDetail.vue'
 import FeatureManager from '../views/Functions/FeatureManage.vue'
 import HobbyManager from '../views/Functions/HobbyManage.vue'
+import MemberAdd from '../views/Members/MemberAdd.vue'
 
 const routes = [
   { path: '/', 
@@ -20,6 +21,12 @@ const routes = [
         path: '/member/detail',
         name: 'member-detail',
         component: MemberDetail
+      },
+
+      {
+        path: '/member/add',
+        name: 'member-add',
+        component: MemberAdd
       },
 
       {

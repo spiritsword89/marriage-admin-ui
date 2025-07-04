@@ -82,7 +82,32 @@
 
         <div class="main-router-view-area">
           <div class="amdin-staff-header-bar">
+              <div class="header-left">
 
+              </div>
+
+              <div class="header-right">
+                  <div class="admin-staff-profile">
+                    <div class="header-link">
+                        <el-icon style="vertical-align: middle">
+                          <notebook />
+                        </el-icon>
+                        <a href="javascript:void(0)">schedule</a>
+                    </div>
+                    <div class="header-link">
+                       <el-icon style="vertical-align: middle">
+                          <Message />
+                        </el-icon>
+                        <a href="javascript:void(0)">message</a>
+                    </div>
+                    <div class="profile-avatar">
+                        <el-avatar fit="contain" src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg" />
+                    </div>
+                    <div class="profile-name">
+                        <span>Justin</span>
+                    </div>
+                  </div>
+              </div>
           </div>
           <router-view></router-view>
         </div>
@@ -160,6 +185,55 @@ export default {
 .menu-row {
   width: 100%;
   height: 100%;
+}
+
+.amdin-staff-header-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 24px;
+
+  .header-link {
+    margin: 0 12px;
+  }
+
+  .header-link a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #a0cfff;
+    padding: 0 2px;
+  }
+
+  .header-link:hover {
+    color: #409eff;
+  }
+
+  .profile-name {
+    font-size: 12px;
+    margin: 4px;
+    cursor: pointer;
+  }
+
+  .header-left {
+    width: 288px;
+    height: 100%;
+  }
+
+  .header-right {
+    width: 488px;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    .admin-staff-profile {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+        .profile-avatar {
+
+        }
+    }
+  }
 }
 
 .el-menu--vertical {

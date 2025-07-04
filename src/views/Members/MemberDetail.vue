@@ -101,7 +101,6 @@ export default {
         async function loadDetail() {
             const {data: data} = await loadMemberDetails(id)
             Object.assign(member, data)
-            console.log(data)
             photoSelfies.value = member.allSelfies
         }
 
